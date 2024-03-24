@@ -25,20 +25,6 @@ export const signin = createAsyncThunk(
   }
 );
 
-export const fetchUD = createAsyncThunk(
-  "auth/user",
-  async (token: string, thunkAPI) => {
-    try {
-      const res = await Api.fetchUser(token);
-      console.log(res);
-      return res.data;
-    } catch (error: any) {
-      thunkAPI.rejectWithValue(error.message);
-      throw new Error(error.message);
-    }
-  }
-);
-
 interface InitialState {
   isLoading: boolean;
   isSuccess: boolean;
@@ -94,12 +80,6 @@ const AuthSlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         // state.message = (action.payload as any).data.message;
-      })
-      .addCase(fetchUD.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.isError = false;
-        // state.auth = action.payload.data;
       });
   },
 });

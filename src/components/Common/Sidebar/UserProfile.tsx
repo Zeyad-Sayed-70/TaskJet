@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const UserProfile = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { profile, isLoading, isSuccess } = useSelector(
+  const { profile, isLoading } = useSelector(
     (state: RootState) => state.linkedin
   );
   const { authToken } = useAuth();
@@ -29,7 +29,7 @@ const UserProfile = () => {
 
   return (
     <div className="flex items-center gap-3">
-      <Image
+      <img
         alt="avatar"
         src={profile?.imageSrc || "/user.jpg"}
         width={60}

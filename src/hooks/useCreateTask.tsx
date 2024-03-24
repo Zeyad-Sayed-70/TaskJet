@@ -20,8 +20,6 @@ const useCreateTask = (
   } = useSelector((state: RootState) => state.task);
   const { tasks, setTasks } = useTasks();
 
-  console.log(task);
-
   useEffect(() => {
     if (!isLoading && !isError && isSuccess) {
       if (task === null || !tasks) return;
