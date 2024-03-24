@@ -59,3 +59,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     - react-hook-form: "^7.51.1"
     - eslint: "^8"
     - postcss: "^8"
+
+## Database Connection
+
+To Connect to the MongoDB Use the following MongoDB URI:
+
+> <p>mongodb+srv://user1:nMMyDnUFNBchWt8d@cluster0.flhmubs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0</p>
