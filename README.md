@@ -1,18 +1,18 @@
 # Task Management App ( 🚀TaskJet )
 
-a task management application that allows users to organize and track their tasks.
+A task management application that allows users to organize and track their tasks.
 
 ## Getting Started
 
 To get started using this app locally, follow these steps:
 
-First, Clone the repository
+First, clone the repository:
 
 ```bash
 git clone https://github.com/Zeyad-Sayed-70/TaskJet-Client
 ```
 
-Second, Install the dependencies
+Second, install the dependencies:
 
 ```bash
 npm install
@@ -20,7 +20,7 @@ npm install
 yarn install
 ```
 
-Third, Run the app
+Third, run the app
 
 ```bash
 npm run dev
@@ -36,14 +36,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Features
 
-1. Task CRUD Operations, means you create, read, update and delete tasks.
-2. Authentication, you can sign in, sing up and logout.
-3. Getting LinkedIn profile data such as Name, Profile Image and Role using a profile link only.
-4. Mark the task as completed.
-5. Filter Tasks depends on thier tags.
-6. Responsive Desgin.
+1. Task CRUD Operations, meaning you can create, read, update, and delete tasks.
+2. Authentication, allowing you to sign in, sign up, and log out.
+3. Retrieval of LinkedIn profile data such as name, profile image, and role using only a profile link.
+4. Ability to mark tasks as completed.
+5. Task filtering based on their tags.
+6. Responsive Design.
 
-## Technologies + Thier Versions
+## Technologies & Their Versions
 
     - next: "14.1.4"
     - nest: "^10.0.0"
