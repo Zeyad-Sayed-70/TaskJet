@@ -52,7 +52,7 @@ const useUpdateTask = (
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    dispatch(updateTask({ newTask: taskData, id }));
+    if (id) dispatch(updateTask({ newTask: taskData, id }));
   }
 
   return { handleSubmit };

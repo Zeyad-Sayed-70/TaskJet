@@ -39,4 +39,6 @@ const Task = memo(({ task }: { task: Task }) => {
   );
 });
 
+Task.displayName = "Task";
+
 export default Task;

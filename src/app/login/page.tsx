@@ -18,7 +18,7 @@ const page = () => {
             href={"/register"}
             className="text-sm text-blue-600 hover:underline w-fit mt-6 block"
           >
-            I don't have account!
+            I don&apos;t have account!
           </Link>
         </section>
       </Container>

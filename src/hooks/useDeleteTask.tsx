@@ -45,7 +45,7 @@ const useDeleteTask = (id: string, setIsOpen: (isOpen: boolean) => void) => {
   }, [isLoading, isError, isSuccess]);
 
   function handleDelete() {
-    dispatch(deleteTask(id));
+    if (id) dispatch(deleteTask(id));
   }
 
   return { handleDelete };

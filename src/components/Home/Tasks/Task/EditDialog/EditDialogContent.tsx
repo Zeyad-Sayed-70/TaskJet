@@ -22,9 +22,11 @@ const EditDialogContent = () => {
     isCompleted: task?.isCompleted,
   });
 
-  if (!task) return;
-
-  const { handleSubmit } = useUpdateTask(task._id, taskData, setIsOpen);
+  const { handleSubmit } = useUpdateTask(
+    (task as any)._id,
+    taskData,
+    setIsOpen
+  );
 
   return (
     <DialogContent>

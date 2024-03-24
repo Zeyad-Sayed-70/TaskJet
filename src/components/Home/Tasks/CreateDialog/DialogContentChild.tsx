@@ -26,7 +26,7 @@ const DialogContentChild = ({
     if (userData) {
       setTaskData({ ...taskData, userId: userData._id });
     }
-  }, [userData]);
+  }, [userData, taskData]);
 
   const { handleSubmit } = useCreateTask(taskData, setIsOpen);
 

@@ -3,6 +3,7 @@ import { useAuth } from "@/context/AuthProvider";
 import { getProfile } from "@/redux/linkedIn/slice";
 import { AppDispatch, RootState } from "@/redux/store";
 import { getUserData } from "@/redux/user/slice";
+import Image from "next/image";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -18,19 +19,21 @@ const UserProfile = () => {
     if (authToken) {
       dispatch(getUserData({ token: authToken }));
     }
-  }, [authToken]);
+  }, [authToken, dispatch]);
 
   useEffect(() => {
     if (userData) {
       dispatch(getProfile(userData.linkedIn));
     }
-  }, [userData]);
+  }, [userData, dispatch]);
 
   return (
     <div className="flex items-center gap-3">
-      <img
+      <Image
         alt="avatar"
         src={profile?.imageSrc || "/user.jpg"}
+        width={60}
+        height={60}
         className="rounded-full max-w-[60px] max-h-[60px] min-w-[60px] min-h-[60px]"
       />
 

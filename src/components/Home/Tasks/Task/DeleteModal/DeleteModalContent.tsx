@@ -12,8 +12,7 @@ import React from "react";
 
 const DeleteModalContent = () => {
   const { setIsDeleteModalOpen: setIsOpen, task } = useTasks();
-  if (!task) return;
-  const { handleDelete } = useDeleteTask(task._id, setIsOpen);
+  const { handleDelete } = useDeleteTask((task as any)._id, setIsOpen);
   return (
     <DialogContent>
       <DialogHeader>
